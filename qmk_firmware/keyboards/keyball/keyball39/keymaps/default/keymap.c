@@ -59,6 +59,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
+const uint16_t PROGMEM test_combo1[] = {KC_E, KC_H, COMBO_END};
+const uint16_t PROGMEM test_combo2[] = {KC_F, KC_T, COMBO_END};
+combo_t key_combos[] = {
+    COMBO(test_combo1, KC_BSPC),
+    COMBO(test_combo2, KC_ENTER), // keycodes with modifiers are possible too!
+};
+
 #ifdef OLED_ENABLE
 
 #    include "lib/oledkit/oledkit.h"
